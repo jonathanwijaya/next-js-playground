@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "firebase": "^9.8.2",
+    "jest": "^28.1.0",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-hook-form": "^7.31.3",
     "react-icons": "^4.3.1",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
