@@ -5,6 +5,9 @@ import requests from "../utils/request";
 import { Movie } from "../typing";
 import Row from "../components/Row";
 import useAuth from "../hooks/useAuth";
+import { useRecoilValue } from "recoil";
+import { modalState } from "../atoms/modalAtom";
+import Modal from "../components/Modal";
 
 interface Props {
   netflixOriginals: Movie[];
@@ -28,6 +31,9 @@ const Home = ({
   documentaries,
 }: Props) => {
   const { loading } = useAuth();
+
+  const showModal = useRecoilValue(modalState);
+
   if (loading) {
     return null;
   }
@@ -52,6 +58,7 @@ const Home = ({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
+      {showModal && <Modal />}
     </div>
   );
 };
