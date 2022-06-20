@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import Thumbnail, { Props } from "../components/Thumbnail";
-import { mockData } from "../___mock___/mockData";
+import { mockData } from "../__mock__/mockData";
 import { RecoilRoot } from "recoil";
 import Image from "next/image";
 
